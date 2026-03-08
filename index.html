@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>threejs-webgl-experiment</title>
+  </head>
+  <body>
+    <div class="app-info" style="position: absolute; top: 0; left: 0;">
+      <p>
+        Funcionalidad en progreso: Modificación de vertices </br>
+      </p>
+      <p style="max-width: 25%;">
+        Puede que algunas figuras no se vean correctamente ya que actualmente los vertices en el eje Y siguen un patron de sin(position.z) establecido en vertex.glsl
+      </p>
+    </div>
+    <div
+      id="slider-container"
+      style="position: absolute; top: 0; right: 0; color: aliceblue"
+    ></div>
+    <script type="module" src="/src/index.js"></script>
+  </body>
+</html>

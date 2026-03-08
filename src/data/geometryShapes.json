@@ -1,0 +1,80 @@
+{
+  "Basics": [
+    {
+      "BoxGeometry": [
+        { "name": "width", "value": 8 },
+        { "name": "height", "value": 8 },
+        { "name": "depth", "value": 8 },
+        { "name": "widthSegments", "value": 8 },
+        { "name": "heightSegments", "value": 8 },
+        { "name": "depthSegments", "value": 8 }
+      ]
+    },
+    {
+      "ConeGeometry": [
+        { "name": "radius", "value": 5 },
+        { "name": "height", "value": 20 },
+        { "name": "radialSegments", "value": 32 }
+      ]
+    },
+    {
+      "RingGeometry": [
+        { "name": "innerRadius", "value": 1 },
+        { "name": "outerRadius", "value": 5 },
+        { "name": "thetaSegments", "value": 32 },
+        { "name": "phiSegments", "value": 5 }
+      ]
+    },
+    {
+      "PlaneGeometry": [
+        { "name": "width", "value": 5 },
+        { "name": "height", "value": 5 },
+        { "name": "widthSegments", "value": 5 }
+      ]
+    },
+    {
+      "TorusGeometry": [
+        { "name": "radius", "value": 10 },
+        { "name": "tube", "value": 3 },
+        { "name": "radialSegments", "value": 16 },
+        { "name": "tubularSegments", "value": 100 }
+      ]
+    },
+    {
+      "CircleGeometry": [
+        { "name": "radius", "value": 6 },
+        { "name": "segments", "value": 64 }
+      ]
+    },
+    {
+      "SphereGeometry": [
+        { "name": "radius", "value": 6 },
+        { "name": "widthSegments", "value": 64 },
+        { "name": "heightSegments", "value": 48 }
+      ]
+    },
+    {
+      "CapsuleGeometry": [
+        { "name": "radius", "value": 6 },
+        { "name": "length", "value": 6 },
+        { "name": "capSubdivisions", "value": 24 },
+        { "name": "radialSegments", "value": 16 }
+      ]
+    },
+    {
+      "CylinderGeometry": [
+        { "name": "radiusTop", "value": 5 },
+        { "name": "radiusBottom", "value": 5 },
+        { "name": "height", "value": 20 },
+        { "name": "radialSegments", "value": 32 }
+      ]
+    }
+  ],
+  "Complex": [
+    { "DodecahedronGeometry": "8,8,8,8,8,8" },
+    { "IcosahedronGeometry": "8,8,8,8,8,8" },
+    {
+      "TubeGeometry": "5,20,32"
+    }
+  ]
+}
