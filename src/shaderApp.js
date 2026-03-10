@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { useCamera, useScene, useClock } from "./lib/init.js";
+import { useCamera, useScene, useUniformData } from "./lib/init.js";
 import fragmentShader from "./shaders/fragment.glsl";
 import vertexShader from "./shaders/vertex.glsl";
 import GEOMETRY_DATA from "./data/geometryShapes.json";
@@ -10,7 +10,7 @@ let currentParams = [];
 export const shaderVanillaApp = () => {
   const scene = useScene();
   const camera = useCamera();
-  const clock = useClock();
+  const uniformData = useUniformData();
 
   // Iluminación
   const dirLight = new THREE.DirectionalLight("#526cff", 0.6);
@@ -25,12 +25,7 @@ export const shaderVanillaApp = () => {
     vertexShader,
     fragmentShader,
     wireframe: true,
-    uniforms: {
-      uTime: {
-        type: "f",
-        value: clock.getElapsed(),
-      },
-    },
+    uniforms: uniformData,
   });
   // Inicialización con BoxGeometry
   const defaultGeometry = Object.keys(GEOMETRY_DATA.Basics[0])[0];

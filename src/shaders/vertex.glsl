@@ -19,5 +19,5 @@ void main(){
         // vec4 modelViewPosition = modelViewMatrix * vec4(position, 1.0);
         // vec4 projectedPosition = projectionMatrix * modelViewPosition;
         // gl_Position = projectedPosition;
-        gl_Position = projectionMatrix * modelViewMatrix * vec4(sin(position.z/4.0) + position.x, sin(position.z*4.0) + position.y, sin(position.y/4.0) + position.z, 1.0);
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(sin(position.z/4.0) + position.x, 4.0*sin(position.z/4.0 + uTime) + position.y, sin(position.y/4.0) + position.z, 1.0);
 }

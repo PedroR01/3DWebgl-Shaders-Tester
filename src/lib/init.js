@@ -17,7 +17,8 @@ let scene,
   clock,
   renderWidth,
   renderHeight,
-  renderAspectRatio;
+  renderAspectRatio,
+  uniformData;
 // const renderTickManager = new TickManager();
 
 export const initEngine = async () => {
@@ -45,6 +46,13 @@ export const initEngine = async () => {
   document.body.appendChild(renderer.domElement);
 
   clock = new THREE.Timer();
+  uniformData = {
+    uTime: {
+      type: "f",
+      value: clock.getElapsed(),
+    },
+  };
+
   const target = new THREE.WebGLRenderTarget(renderWidth, renderHeight, {
     samples: 8,
   });
@@ -79,6 +87,7 @@ export const initEngine = async () => {
 
     // timestamp is optional
     clock.update(timestamp);
+    uniformData.uTime.value = clock.getElapsed();
 
     controls.update();
     composer.render();
@@ -105,6 +114,8 @@ export const useControls = () => controls;
 export const useClock = () => clock;
 
 export const useComposer = () => composer;
+
+export const useUniformData = () => uniformData;
 
 export const addPass = (pass) => {
   composer.addPass(pass);
