@@ -83,8 +83,6 @@ export const initEngine = async () => {
   );
 
   function animate(timestamp) {
-    requestAnimationFrame(animate);
-
     // timestamp is optional
     clock.update(timestamp);
     uniformData.uTime.value = clock.getElapsed();
@@ -94,7 +92,7 @@ export const initEngine = async () => {
     // renderer.render(scene, camera); // No postProcessing. More optimal and simpler than composer.
   }
 
-  renderer.setAnimationLoop(animate);
+  renderer.setAnimationLoop(animate); // Threejs method that replaces the traditional DOM (window) method requestAnimationFrame
   // renderTickManager.startLoop(); // More advanced and custom timer handler.
 };
 
